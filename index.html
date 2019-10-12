@@ -1,0 +1,67 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link href="lib/mocha.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <!-- 👍 YOUR HTML HERE 👍 -->
+<div class="container">
+  <div class="imgContainer">
+    <img src='https://previews.123rf.com/images/faysalfarhan/faysalfarhan1502/faysalfarhan150200096/35973128-home-icon-red-glossy-round-button.jpg' aria-hidden="true" alt="Home Icon" id="inn" onclick="rest(hero)">
+    <img src="https://damascusoutlet.com/wp-content/uploads/2018/01/25.jpg" alt="Dagger Image" id="dagger"  onclick="pickUpItem(hero,newWeapon)">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUDpgqLqYPxuBncpsCrRSWb3wXxzX-_1JUCjkk2X4yUotyEjlb&s" alt="BagImage"  id="bag" onclick="equipWeapon(hero)" >
+  </div>
+  <div class="panel">
+    <div class="displayPanel">
+        <p style="color: white"><strong>Player Stats</strong></p>
+        <div class="displayContainer">
+          <dl class="dlClass">
+            <dt>Player Name  :</dt>
+            <dd></dd>
+            <dt>Health       :</dt>
+            <dd></dd>
+            <dt>WeaponType   :</dt>
+            <dd></dd>
+            <dt>WeaponDamage :</dt>
+            <dd></dd>
+          </dl>
+        </div>
+        <button id="chgUser" onclick="getInput(hero)">Change Player Name</button>
+      </div>
+      <div class="playContainer">
+          <div class="playerClass" id="parent">
+            <img src="https://thumbs.dreamstime.com/b/knife-throwing-man-concept-vector-linear-icon-isolated-transp-knife-throwing-man-concept-vector-linear-icon-isolated-130079349.jpg"
+             alt="player image" id="player">
+             <!-- <img src="https://image.shutterstock.com/image-photo/green-dart-isolated-on-white-260nw-79546594.jpg" alt="shootImage" id="shootImg"> 
+             <img src="https://image.flaticon.com/icons/svg/1477/1477230.svg" alt="enemy" id="enemy-1" class="enemy">-->
+    
+    
+          </div>
+          <button id="playGame" onclick="shoot(hero)">Click To Shoot</button>
+    
+        </div>
+  </div>
+</div>
+
+
+  <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
+  <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
+
+  <div id="mocha">
+  <!-- MOCHA TEST FEEDBACK WILL BE RENDERED HERE -->
+  </div>
+
+  <script src="lib/chai.js"></script>
+  <script src="lib/mocha.js"></script>
+  <script src="lib/sinon.js"></script>
+  <script>mocha.setup('bdd')</script>
+  <script src="YOUR_JAVASCRIPT_HERE.js"></script>
+  <script src="lib/game_logic.test.js"></script>
+
+</body>
+</html>
